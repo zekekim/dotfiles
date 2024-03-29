@@ -34,6 +34,14 @@ return require('packer').startup(function(use)
     }
 
     use {
+        "mcchrish/zenbones.nvim",
+        requires = "rktjmp/lush.nvim"
+    }
+    use {
+        "bluz71/vim-moonfly-colors"
+    }
+
+    use {
         "ellisonleao/gruvbox.nvim"
     }
 
