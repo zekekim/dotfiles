@@ -12,13 +12,11 @@ return require('packer').startup(function(use)
         'VonHeikemen/lsp-zero.nvim',
         branch = 'v3.x',
         requires = {
-            --- Uncomment these if you want to manage LSP servers from neovim
-            { 'williamboman/mason.nvim' },
-            { 'williamboman/mason-lspconfig.nvim' },
+            {'williamboman/mason.nvim'},
+            {'williamboman/mason-lspconfig.nvim'},
+            { 'saadparwaiz1/cmp_luasnip' },
 
-            -- LSP Support
             { 'neovim/nvim-lspconfig' },
-            -- Autocompletion
             { 'hrsh7th/nvim-cmp' },
             { 'hrsh7th/cmp-nvim-lsp' },
             { 'L3MON4D3/LuaSnip' },
@@ -63,4 +61,15 @@ return require('packer').startup(function(use)
             -- see below for full list of optional dependencies 👇
         },
     })
+
+    use { 'lervag/vimtex' }
+    use {
+        "iurimateus/luasnip-latex-snippets.nvim",
+        -- vimtex isn't required if using treesitter
+        requires = { "L3MON4D3/LuaSnip", "lervag/vimtex" },
+        config = function()
+            require 'luasnip-latex-snippets'.setup({ use_treesitter = false })
+            require("luasnip").config.setup { enable_autosnippets = true }
+        end,
+    }
 end)

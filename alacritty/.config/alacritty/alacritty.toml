@@ -20,17 +20,22 @@
 
 [window]
 
-opacity = 0.9
+opacity = 0.8
+blur=true
 
 padding.x = 10
 padding.y = 10
+dynamic_padding = true
 
-decorations = "Full"
+
+decorations = "Buttonless"
 decorations_theme_variant = "Dark" # "Dark"
 
 [font]
 
-size = 8.0
+normal = {family = "JetBrainsMono Nerd Font", style = "Regular"}
+
+size = 12.0
 
 # Tip: for inspiration, look for values in the source code files of your favorite VS Code themes, and use the color picker in
 # Google to test colors before setting a value, or simply using an editor such as VS Code where colors are displayed in a small box when a HEX is detected by the editor.
