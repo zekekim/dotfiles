@@ -1,5 +1,9 @@
 return {
     { "nvim-lua/plenary.nvim" },
+
+    { 'neovim/nvim-lspconfig' },
+    { 'williamboman/mason.nvim' },
+    { 'williamboman/mason-lspconfig.nvim' },
     {
         "L3MON4D3/LuaSnip",
         -- follow latest release.
@@ -7,13 +11,9 @@ return {
         -- install jsregexp (optional!).
         build = "make install_jsregexp"
     },
-    --- Uncomment the two plugins below if you want to manage the language servers from neovim
-    { 'williamboman/mason.nvim' },
-    { 'williamboman/mason-lspconfig.nvim' },
-    { 'VonHeikemen/lsp-zero.nvim',        branch = 'v3.x' },
-    { 'neovim/nvim-lspconfig' },
-    { 'hrsh7th/cmp-nvim-lsp' },
     { 'hrsh7th/nvim-cmp' },
+    { 'hrsh7th/cmp-nvim-lsp' },
+
     { 'L3MON4D3/LuaSnip' },
     { 'nvim-treesitter/nvim-treesitter' },
     {

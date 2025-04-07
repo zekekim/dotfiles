@@ -37,7 +37,7 @@ exec ~/.fehbg &
 exec --no-startup-id nm-applet
 
 ## Remap CapsLock to ESC
-exec setxkbmap -option caps:swapescape
+exec setxkbmap -option caps:escape
 
 exec --no-startup-id picom -CGb
 
